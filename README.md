@@ -1,6 +1,6 @@
 # Voice to Text Converter
 
-The Voice to Text Converter is a web application that allows users to convert their spoken words into text. This project demonstrates how to integrate speech recognition functionality into a web application using JavaScript and interact with a server-side PHP script to save the transcribed text.
+This project is a web application that allows users to convert their spoken words into text. It demonstrates how to integrate speech recognition functionality into a web application using JavaScript and interact with a server-side PHP script to save the transcribed text.
 
 ## Features
 
