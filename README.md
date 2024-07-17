@@ -1,45 +1,38 @@
 # Voice to Text Converter
 
-This is a simple HTML, CSS, and JavaScript application that allows users to convert their speech to text using the browser's built-in speech recognition API.
+The Voice to Text Converter is a web application that allows users to convert their spoken words into text. This project demonstrates how to integrate speech recognition functionality into a web application using JavaScript and interact with a server-side PHP script to save the transcribed text.
 
 ## Features
 
-1. **Speech Recognition**: The application uses the `webkitSpeechRecognition` API to capture the user's speech and convert it to text.
-2. **Real-time Transcription**: As the user speaks, the transcribed text is displayed in a textarea in real-time.
-3. **Responsive Design**: The application is designed to be responsive and mobile-friendly, ensuring a consistent user experience across different devices.
+1. **Speech Recognition**: The application uses the `webkitSpeechRecognition` API to capture the user's spoken words and convert them into text.
+2. **Text Display**: The transcribed text is displayed in a textarea for the user to view and interact with.
+3. **Server-side Integration**: The application sends the transcribed text to a PHP script running on a server (in this case, `localhost:3000`) using an AJAX request. The PHP script saves the transcribed text to a database.
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- PHP
+- MySQL (for the database)
 
 ## How to Use
 
-1. Open the HTML file in a web browser that supports the `webkitSpeechRecognition` API (e.g., Google Chrome).
-2. Click the "Start speaking" button to begin the speech recognition process.
-3. Speak clearly, and the transcribed text will appear in the textarea.
-4. To stop the speech recognition, simply click the "Start speaking" button again.
+1. **Set up the Server Environment**:
+   - Install a local web server (e.g., XAMPP, WAMP, or MAMP) that includes PHP and MySQL.
+   - Create a database named `voice_to_text` and a table named `transcripts` with a column named `text` to store the transcribed text.
+   - Update the `$servername`, `$username`, `$password`, and `$database` variables in the `save_transcript.php` file with your server configuration.
 
-## HTML Structure
+2. **Run the Application**:
+   - Place the HTML, CSS, and JavaScript files in your local web server's document root.
+   - Open the HTML file in a web browser (preferably Chrome or another browser that supports the `webkitSpeechRecognition` API).
+   - Click the "Start speaking" button and begin speaking. The transcribed text will be displayed in the textarea and simultaneously saved to the database.
 
-The HTML structure of the application consists of the following elements:
+## File Structure
 
-- `<h2>`: Displays the title of the application.
-- `<div class="content">`: Contains the main content of the application.
-- `<button id="speak">`: The button that starts and stops the speech recognition.
-- `<textarea id="text" readonly>`: The textarea where the transcribed text is displayed.
+- `index.html`: The main HTML file that contains the structure of the web application.
+- `style.css`: The CSS file that styles the web application.
+- `voiceTotext.js`: The JavaScript file that handles the speech recognition and AJAX request to the server.
+- `save_transcript.php`: The PHP script that receives the transcribed text from the AJAX request and saves it to the database.
 
-## CSS Styles
-
-The CSS styles define the layout and appearance of the application, including:
-
-- Centering the content both vertically and horizontally on the page.
-- Styling the button and textarea.
-- Applying a drop shadow to the content container.
-
-## JavaScript Functionality
-
-The JavaScript code handles the speech recognition functionality:
-
-1. The `speakbtn` element is selected using `document.getElementById("speak")`.
-2. The `text` element is selected using `document.querySelector("#text")`.
-3. An event listener is added to the `speakbtn` element, which creates a new `webkitSpeechRecognition` object when clicked.
-4. The recognition language is set to `"en-GB"`.
-5. The `onresult` event handler is used to update the `text` element with the transcribed speech.
-6. The `start()` method is called to begin the speech recognition process.
 
