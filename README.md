@@ -37,7 +37,7 @@ This project is a web application that allows users to convert their spoken word
 
 ## Output 
 
-(https://github.com/user-attachments/assets/2897c116-c261-459f-ba18-6eae07144222)
+[Click to watch the video](https://github.com/user-attachments/assets/2897c116-c261-459f-ba18-6eae07144222)
 
 
 
