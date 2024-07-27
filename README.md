@@ -35,4 +35,9 @@ This project is a web application that allows users to convert their spoken word
 - `voiceTotext.js`: The JavaScript file that handles the speech recognition and AJAX request to the server.
 - `save_transcript.php`: The PHP script that receives the transcribed text from the AJAX request and saves it to the database.
 
+## Output 
+
+(https://github.com/user-attachments/assets/2897c116-c261-459f-ba18-6eae07144222)
+
+
 
